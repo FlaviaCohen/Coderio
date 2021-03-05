@@ -69,8 +69,9 @@ body {
         box-sizing: border-box;
         outline: none;
         font-family: Ubuntu;
-        font-weight: 400px;
+        font-weight: 400;
         text-overflow: ellipsis;
+        font-size: 15px;
         &.open {
           border-radius: 6px 6px 0 0;
           border-bottom: none;
@@ -194,14 +195,15 @@ body {
       }
     }
     .name {
-      margin: 12px auto 0;
+      margin: 12px auto;
       font-family: Roboto;
       font-weight: 700;
     }
     .data {
-      margin: 12px auto 0;
+      margin: 0 auto 6px;
       font-family: Roboto;
       font-weight: 300;
+      
     }
   }
 
