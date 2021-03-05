@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 
 const Option = ({ timezones, setTimezones, city }) => {
-  const [checked, setChecked] = useState(false);
+/*   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     timezones.includes(city) ? setChecked(true) : null;
-  }, []);
+  }, []); */
 
   return (
     <div

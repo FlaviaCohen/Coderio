@@ -3,6 +3,7 @@ import "../../scss/style.scss";
 import axios from "axios";
 import Option from "../components/Option";
 import Card from "../components/Card";
+import { GrFormClose } from "react-icons/gr";
 
 const Content = () => {
   const [cities, setCities] = useState([]);
@@ -19,13 +20,18 @@ const Content = () => {
 
   useEffect(() => {
     axios
-      .get("http://worldtimeapi.org/api/timezone")
+      .get("http://localhost:8080/api/timezones")
       .then((res) => setCities(res.data));
   }, []);
 
+
   return (
     <div className="home-container">
+      
       <form onSubmit={handleSubmit}>
+        {value ? (
+          <GrFormClose className="close" onClick={() => setValue("")} />
+        ) : null}
         <input
           className={`search-bar ${value ? "open" : null}`}
           placeholder="Enter your city. Example: 'Africa/Abidjan'"
