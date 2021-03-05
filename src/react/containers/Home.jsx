@@ -48,7 +48,18 @@ const Content = () => {
             : null}
         </div>
       </form>
-      {timezones.length ? timezones.map((timezone, key) => <Card key={key} timezone={timezone}/>) : null}
+      <div className="cards">
+        {timezones.length
+          ? timezones.map((timezone, key) => (
+              <Card
+                key={key}
+                timezone={timezone}
+                setTimezones={setTimezones}
+                timezones={timezones}
+              />
+            ))
+          : null}
+      </div>
     </div>
   );
 };
