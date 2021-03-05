@@ -1,11 +1,14 @@
 import React from "react";
-import { BiWorld } from "react-icons/bi";
 
 const Header = () => {
-  return <div className="header-container">
-      <BiWorld />
+  return (
+    <div className="header-container">
+      <div className="logo">
+        <img src="https://pbs.twimg.com/profile_images/1347256817039126533/_TUENOf3_400x400.jpg" />
+      </div>
       <p>Coderio challenge</p>
-  </div>;
+    </div>
+  );
 };
 
 export default Header;

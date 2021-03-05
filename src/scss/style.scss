@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding-bottom: 60px;
+  padding: 60px 0;
   .header-container {
     position: fixed;
     top: 0;
@@ -19,6 +19,27 @@ body {
     height: 60px;
     background: $gray4;
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .logo{
+        margin: 0 12px 0 30px; 
+        width: 34px;
+
+        img{
+            width: 100%;
+            border-radius: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.8)
+        }
+    }
+
+    p{
+        font-family: Ubuntu;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 20px;
+        margin: 0;
+    }
   }
 
   .content {
@@ -46,6 +67,7 @@ body {
         outline: none;
         font-family: Ubuntu;
         font-weight: 400px;
+        text-overflow: ellipsis;
         &.open {
           border-radius: 6px 6px 0 0;
           border-bottom: none;
