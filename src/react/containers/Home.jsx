@@ -25,7 +25,6 @@ const Content = () => {
 
   return (
     <div className="content">
-      {console.log(timezones)}
       <form onSubmit={handleSubmit}>
         <input
           className={`search-bar ${value ? "open" : null}`}

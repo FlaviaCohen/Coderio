@@ -17,6 +17,7 @@ const Card = ({ timezone, timezones, setTimezones }) => {
 
   return (
     <div className="card-container">
+        {console.log(timezoneData)}
       <RiCloseCircleFill
         onClick={() =>
           setTimezones(timezones.filter((current) => current != timezone))
