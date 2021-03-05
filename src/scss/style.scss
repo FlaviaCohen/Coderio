@@ -1,29 +1,132 @@
 @import "./config.scss";
 
-body{
-    margin: 0;
+body {
+  margin: 0;
+  $gray1: #f4f4f5;
 }
 
-.container{
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .header-container {
     width: 100%;
-    margin: 0 auto; 
-    display: flex; 
-    flex-direction: column;
+    height: 60px;
+    background: $gray4;
+  }
 
-    .header-container{
-        width: 100%;
-        height: 60px;
-        background: $gray4;
-    }
+  .content {
+    width: 90%;
+    margin: 24px auto;
+    form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .search-bar {
+        width: 50%;
+        height: 54px;
+        margin: 0 auto;
+        border-radius: 27px;
+        border: 1px solid $gray4;
+        padding: 0 24px;
+        box-sizing: border-box;
+        outline: none;
+        font-family: Ubuntu;
+        font-weight: 400px;
+        &.open {
+          border-radius: 6px 6px 0 0;
+          border-bottom: none;
+          &:focus {
+            border-bottom: none;
+          }
+        }
+      }
+      .dropdown {
+        position: absolute;
+        top: 54px;
+        right: 25%;
+        max-height: 350px;
+        transition: max-height 0.3s linear;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 18px;
+        box-sizing: border-box;
+        border: 1px solid $gray4;
+        border-top: none;
+        border-radius: 0 0 6px 6px;
+        margin: 0 auto;
+        width: 50%;
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
 
-    .content{
-        width: 90%;
-        background: $gray1;
-    }
+        &::-webkit-scrollbar-thumb {
+          background-color: white;
+        }
 
-    .footer-container{
-        width: 100%;
-        height: 300px;
-        background: $gray8;
+        &::-webkit-scrollbar-track {
+          background-color: white;
+        }
+        &.hidden {
+          max-height: 0;
+          padding: 0;
+          border: none;
+          transition: all 0.2s linear;
+        }
+        &:hover {
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: $gray4;
+            border-radius: 6px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: $gray1;
+          }
+        }
+
+
+      }
     }
+  }
+
+  .option-container {
+    width: 100%;
+    height: 35px;
+    //border-bottom: 1px solid $gray3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Ubuntu;
+    font-weight: 400px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      svg {
+        color: $success;
+        margin-right: 12px;
+      }
+      p {
+        margin: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footer-container {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $gray8;
+  }
 }
