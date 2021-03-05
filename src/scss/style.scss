@@ -11,6 +11,9 @@ body {
   display: flex;
   flex-direction: column;
   padding: 60px 0;
+  @media (max-width: $mobile-max) {
+    padding-bottom: 120px;
+  }
   .header-container {
     position: fixed;
     top: 0;
@@ -22,27 +25,27 @@ body {
     align-items: center;
     justify-content: flex-start;
 
-    .logo{
-        margin: 0 12px 0 30px; 
-        width: 34px;
+    .logo {
+      margin: 0 12px 0 30px;
+      width: 34px;
 
-        img{
-            width: 100%;
-            border-radius: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.8)
-        }
+      img {
+        width: 100%;
+        border-radius: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+      }
     }
 
-    p{
-        font-family: Ubuntu;
-        font-weight: 700;
-        font-style: italic;
-        font-size: 20px;
-        margin: 0;
+    p {
+      font-family: Ubuntu;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 20px;
+      margin: 0;
     }
   }
 
-  .content {
+  .home-container {
     width: 90%;
     margin: 24px auto;
     display: flex;
@@ -209,5 +212,37 @@ body {
     bottom: 0;
     left: 0;
     background: $gray8;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media (max-width: $mobile-max) {
+      flex-wrap: wrap;
+      height: 120px;
+      justify-content: center;
+    }
+    .contact {
+      width: 30%;
+      min-width: 180px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        font-size: 24px;
+        color: $gray2;
+        margin-right: 12px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-family: Roboto;
+        font-weight: 300;
+        font-size: 15px;
+        color: $gray2;
+      }
+    }
   }
 }

@@ -24,7 +24,7 @@ const Content = () => {
   }, []);
 
   return (
-    <div className="content">
+    <div className="home-container">
       <form onSubmit={handleSubmit}>
         <input
           className={`search-bar ${value ? "open" : null}`}
