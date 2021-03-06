@@ -15,11 +15,13 @@ const Card = ({ timezone, timezones, setTimezones }) => {
 
   useEffect(() => {
     let name = timezone.replace("/", "_");
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       axios
         .put(`http://localhost:8080/api/timezones/${name}`)
         .then((res) => setTimezoneData(handleData(res.data)));
     }, 5000);
+
+    return () => clearTimeout(timeout);
   });
 
   return (
