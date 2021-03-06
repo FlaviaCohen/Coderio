@@ -1,6 +1,6 @@
 # Coderio
 
-Desafió técnico para Coderio. Consiste en una front-end responsive app que muestra una barra buscadora con funcionalidad de auto-completado. Esta barra busca zonas horarias y le permite al usuario seleccionarlas agregándolas a un tablero o deseleccionarlas/borrarlas del tablero. 
+Desafío técnico para Coderio. Consiste en una front-end responsive app que muestra una barra buscadora con funcionalidad de auto-completado. Esta barra busca zonas horarias y le permite al usuario seleccionarlas agregándolas a un tablero o deseleccionarlas/borrarlas del tablero. 
 El proyecto cuenta con backend que consulta una api de zonas horarias. (http://worldtimeapi.org/api/timezone)
 
 Coderio's technical challenge. It's a front-end responsive app that shows a search-bar with autocomplete feature. The search-bar fetchs timezones and allows the user to select and add them to the board or delete them from it. 
